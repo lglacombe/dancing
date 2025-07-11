@@ -1,0 +1,138 @@
+[
+    {
+        "start_time": "00:00",
+        "end_time": "00:14",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad",
+                "speed": "slow"
+            },
+            {
+                "type": "movement",
+                "name": "move_left",
+                "repeat": 1,
+                "speed": "slow"
+            }
+        ]
+    },
+    {
+        "start_time": "00:14",
+        "end_time": "00:29",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "slow"
+            },
+            {
+                "type": "movement",
+                "name": "move_right",
+                "repeat": 1,
+                "speed": "slow"
+            }
+        ]
+    },
+    {
+        "start_time": "00:30",
+        "end_time": "00:48",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad",
+                "speed": "neutral"
+            },
+            {
+                "type": "movement",
+                "name": "move_left",
+                "repeat": 1,
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:48",
+        "end_time": "01:03",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "fast"
+            },
+            {
+                "type": "movement",
+                "name": "move_right",
+                "repeat": 1,
+                "speed": "fast"
+            }
+        ]
+    },
+    {
+        "start_time": "01:18",
+        "end_time": "01:38",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad",
+                "speed": "slow"
+            },
+            {
+                "type": "movement",
+                "name": "move_left",
+                "repeat": 1,
+                "speed": "slow"
+            }
+        ]
+    },
+    {
+        "start_time": "01:38",
+        "end_time": "01:48",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "slow"
+            },
+            {
+                "type": "movement",
+                "name": "move_right",
+                "repeat": 1,
+                "speed": "slow"
+            }
+        ]
+    },
+    {
+        "start_time": "01:48",
+        "end_time": "01:57",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad",
+                "speed": "neutral"
+            },
+            {
+                "type": "movement",
+                "name": "move_left",
+                "repeat": 1,
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:57",
+        "end_time": "02:00",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "fast"
+            },
+            {
+                "type": "movement",
+                "name": "move_right",
+                "repeat": 1,
+                "speed": "fast"
+            }
+        ]
+    }
+]

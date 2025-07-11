@@ -1,0 +1,267 @@
+[
+    {
+        "start_time": "00:00",
+        "end_time": "00:08",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "slow"
+            }
+        ]
+    },
+    {
+        "start_time": "00:08",
+        "end_time": "00:13",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "neutral"
+            },
+            {
+                "type": "movement",
+                "name": "bounce",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:13",
+        "end_time": "00:18",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy",
+                "speed": "neutral"
+            },
+            {
+                "type": "movement",
+                "name": "move_right",
+                "repeat": 1,
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:18",
+        "end_time": "00:23",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "neutral"
+            },
+            {
+                "type": "movement",
+                "name": "move_left",
+                "repeat": 1,
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:23",
+        "end_time": "00:28",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:28",
+        "end_time": "00:33",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "fast"
+            },
+            {
+                "type": "movement",
+                "name": "move_right",
+                "repeat": 2,
+                "speed": "fast"
+            }
+        ]
+    },
+    {
+        "start_time": "00:33",
+        "end_time": "00:38",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:38",
+        "end_time": "00:43",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:43",
+        "end_time": "00:53",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "euphoric",
+                "speed": "fast"
+            },
+            {
+                "type": "movement",
+                "name": "bounce",
+                "speed": "fast"
+            }
+        ]
+    },
+    {
+        "start_time": "00:53",
+        "end_time": "00:58",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:58",
+        "end_time": "01:02",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "fast"
+            },
+            {
+                "type": "movement",
+                "name": "move_left",
+                "repeat": 1,
+                "speed": "fast"
+            }
+        ]
+    },
+    {
+        "start_time": "01:02",
+        "end_time": "01:08",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:08",
+        "end_time": "01:13",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:13",
+        "end_time": "01:18",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:18",
+        "end_time": "01:23",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:23",
+        "end_time": "01:28",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:28",
+        "end_time": "01:33",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:33",
+        "end_time": "01:38",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:38",
+        "end_time": "01:43",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:43",
+        "end_time": "01:48",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy",
+                "speed": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:48",
+        "end_time": "01:53",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "neutral"
+            }
+        ]
+    }
+]

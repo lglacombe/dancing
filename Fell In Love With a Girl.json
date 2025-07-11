@@ -1,0 +1,336 @@
+[
+    {
+        "start_time": "00:30",
+        "end_time": "00:32",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving"
+            }
+        ]
+    },
+    {
+        "start_time": "00:32",
+        "end_time": "00:34",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral",
+                "speed": "slow"
+            }
+        ]
+    },
+    {
+        "start_time": "00:34",
+        "end_time": "00:36",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:36",
+        "end_time": "00:38",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "00:38",
+        "end_time": "00:40",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "00:40",
+        "end_time": "00:42",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "00:42",
+        "end_time": "00:44",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "00:44",
+        "end_time": "00:46",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "00:56",
+        "end_time": "00:58",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "00:58",
+        "end_time": "01:00",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:00",
+        "end_time": "01:02",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "01:02",
+        "end_time": "01:04",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "01:04",
+        "end_time": "01:06",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "01:06",
+        "end_time": "01:08",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving"
+            }
+        ]
+    },
+    {
+        "start_time": "01:08",
+        "end_time": "01:10",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving",
+                "speed": "slow"
+            }
+        ]
+    },
+    {
+        "start_time": "01:10",
+        "end_time": "01:12",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "euphoric"
+            }
+        ]
+    },
+    {
+        "start_time": "01:12",
+        "end_time": "01:14",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:14",
+        "end_time": "01:16",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:16",
+        "end_time": "01:18",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy"
+            }
+        ]
+    },
+    {
+        "start_time": "01:18",
+        "end_time": "01:20",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving"
+            }
+        ]
+    },
+    {
+        "start_time": "01:20",
+        "end_time": "01:22",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving",
+                "speed": "fast"
+            }
+        ]
+    },
+    {
+        "start_time": "01:22",
+        "end_time": "01:24",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy"
+            }
+        ]
+    },
+    {
+        "start_time": "01:24",
+        "end_time": "01:26",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy",
+                "speed": "fast"
+            }
+        ]
+    },
+    {
+        "start_time": "01:26",
+        "end_time": "01:28",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "happy"
+            }
+        ]
+    },
+    {
+        "start_time": "01:28",
+        "end_time": "01:30",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving"
+            }
+        ]
+    },
+    {
+        "start_time": "01:30",
+        "end_time": "01:32",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving"
+            }
+        ]
+    },
+    {
+        "start_time": "01:32",
+        "end_time": "01:34",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving"
+            }
+        ]
+    },
+    {
+        "start_time": "01:34",
+        "end_time": "01:36",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "loving"
+            }
+        ]
+    },
+    {
+        "start_time": "01:36",
+        "end_time": "01:38",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "01:38",
+        "end_time": "01:40",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "neutral"
+            }
+        ]
+    },
+    {
+        "start_time": "01:40",
+        "end_time": "01:42",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "01:42",
+        "end_time": "01:44",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    },
+    {
+        "start_time": "01:44",
+        "end_time": "01:46",
+        "actions": [
+            {
+                "type": "gesture",
+                "name": "sad"
+            }
+        ]
+    }
+]
