@@ -105,6 +105,7 @@ Se a música ainda **não tiver sido processada anteriormente**, ocorre o seguin
     ]
   }
 ]
+```
 #### 📝 Prompt em F-string:
 
 ```python
@@ -156,7 +157,7 @@ Letra:
 
 Output Format:
 {output_model}
-'''
+```
 Esse prompt é enviado para o **Gemini**, que retorna um **JSON estruturado** contendo os movimentos do robô sincronizados com a música.
 
 ---
