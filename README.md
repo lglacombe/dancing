@@ -43,6 +43,23 @@ Além disso, o código conta com funções auxiliares:
 
 É possível adicionar novos movimentos criando um vetor de poses e preenchendo uma estrutura `Move` com o número de poses, velocidade e matriz de ângulos.
 
+## ⚙️ Controle de Motor DC com a Biblioteca AFMotor
+
+### 🔧 Funcionamento:
+
+- O motor é inicializado com uma velocidade de **210** (valor entre 0 e 255).
+- No `loop()`, ele gira:
+  - **Para frente (FORWARD)** por 500 ms
+  - **Para trás (BACKWARD)** por 700 ms
+- O ciclo se repete indefinidamente, alternando a direção do motor.
+
+### 📦 Requisitos:
+
+- Shield motor baseado em **Adafruit Motor Shield v1**
+- Biblioteca `AFMotor` instalada no Arduino IDE
+- O motor deve estar conectado à saída **M3** do shield.
+
+
 ## 🎵 Integração com Spotify e Controle de Movimentos
 
 O sistema utiliza a biblioteca [Spotipy](https://spotipy.readthedocs.io/) para se conectar à API do Spotify e controlar a reprodução de músicas. Após a autenticação, o usuário deve configurar uma **saída de áudio estéreo mix** compatível com o gravador do sistema (deve ser testado experimentalmente no computador em uso).
