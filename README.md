@@ -11,8 +11,9 @@ simultaneamente. Além disso, foi utilizando também um Motor DC associado com u
 
 Estrutura e montagem do robô
 
-Toda a estrutura foi modelada utilizando o software SolidWorks, exportada no formato de STL e então impressa com o material PLA. Para prender os servos na estrutura utilizamos dos furos para parafusos presentes 
-nos servos
+Toda a estrutura foi modelada utilizando o software SolidWorks, exportada no formato de STL e então impressa com o material PLA. Para prender os servos na estrutura utilizamos de parafusos e cola quente.
+<img width="505" height="379" alt="image" src="https://github.com/user-attachments/assets/6be24647-575c-4353-ad9b-f4171cf2be1f" />
+
 
 Interação com a IA
 
