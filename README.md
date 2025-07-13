@@ -144,16 +144,12 @@ These commands can be:
 - Repeated to achieve larger displacements (e.g., two move_left = 20 units).
 - Combined with arm gestures in the same timestamp window.
 
-2. Pre-Programmed Arm Gestures:
-- hands_in_heart
-- hands_in_head
-- hands_up
-- left_hand_up
-- left_hand_down
-- left_hand_front_to_left
-- right_hand_up
-- right_hand_down
-- right_hand_front_to_right
+2. Pre-Programmed Movements:
+- sad
+- happy
+- euphoric
+- neutral
+- loving
 
 These gestures can be used alone or combined with horizontal movements, and can include speed modifiers: slow, neutral (default), or fast.
 
