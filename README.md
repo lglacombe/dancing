@@ -23,7 +23,7 @@ Toda a estrutura física do robô foi:
 
 <img width="400" alt="estrutura" src="https://github.com/user-attachments/assets/6be24647-575c-4353-ad9b-f4171cf2be1f" />
 
-## 🎮 Funcionamento do Código
+## 🎮 Funcionamento do Código (servo_control.ino)
 
 O código implementa um sistema de controle de movimentos para um robô humanoide com 9 servos, representando articulações como mãos, cotovelos, ombros e cabeça. Cada movimento é composto por uma sequência de poses, armazenadas em uma matriz de ângulos.
 
