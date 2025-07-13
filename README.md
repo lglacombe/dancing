@@ -43,6 +43,25 @@ Além disso, o código conta com funções auxiliares:
 
 É possível adicionar novos movimentos criando um vetor de poses e preenchendo uma estrutura `Move` com o número de poses, velocidade e matriz de ângulos.
 
+## 🎵 Integração com Spotify e Controle de Movimentos
+
+O sistema utiliza a biblioteca [Spotipy](https://spotipy.readthedocs.io/) para se conectar à API do Spotify e controlar a reprodução de músicas. Após a autenticação, o usuário deve configurar uma **saída de áudio estéreo mix** compatível com o gravador do sistema (deve ser testado experimentalmente no computador em uso).
+
+A partir disso, o processo segue dois cenários:
+
+1. **Músicas não gravadas**:  
+   - O sistema grava a música em reprodução via stereo mix;
+   - O áudio é salvo como `.mp3` e processado por um modelo de transcrição (como **Whisper**);
+   - É gerado um arquivo `.json` que associa trechos temporais da música a gestos específicos.
+
+2. **Músicas já gravadas**:  
+   - Ao tocar uma música com um `.json` correspondente, o sistema compara o tempo atual da música com os tempos definidos no arquivo;
+   - Quando um gesto estiver dentro do intervalo correto, ele é enviado ao **Arduino** via uma thread separada, garantindo que a interface com o usuário permaneça responsiva;
+   - O gesto é enviado em formato simples, apenas com a identificação do movimento a ser executado naquele instante.
+
+Esse mecanismo permite que o robô execute coreografias sincronizadas com qualquer música reproduzida no Spotify.
+
+
 
 Interação com a IA
 
