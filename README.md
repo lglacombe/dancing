@@ -63,113 +63,117 @@ Esse mecanismo permite que o robô execute coreografias sincronizadas com qualqu
 
 
 
-Interação com a IA
+## 🎭 Interação com a IA
 
-"""
-Primeiramente estabelecesse uma comunicação com a API do Spotify utilizando da biblioteca do spotipy e da interface com o usuário para controlar qual música será tocada,
-e seus instantes de reprodução, após isso temos 2 cenários possíveis, 
-músicas já gravadas e músicas não gravadas, se a música já não tiver sido gravada será feita a gravação da música através de stereo mix e salva-la como mp3
-para, através do uso da local whisper transcrevenmos a musica, obtendo também o timestamp de cada frase, assim que a trasncrição é completa enviamos um Prompt contendo um json como OUTPUT model,
-e a letra da musica trascrita da musica, a seguir o promt:
-output_model =
+Primeiramente, é estabelecida uma comunicação com a API do **Spotify** utilizando a biblioteca `spotipy` e uma interface com o usuário para selecionar qual música será tocada e controlar seus instantes de reprodução.
 
-[   {
+A partir disso, temos dois cenários possíveis:
 
-     "start_time": "00:00",
+1. 🎵 **Música já gravada**  
+2. 📡 **Música não gravada**
 
-     "end_time": "00:05",
+---
 
-    "actions": [   
+### 📡 Caso 1: Música não gravada
 
-   { "type": "gesture", "name": "hands_up" },
+Se a música ainda **não tiver sido processada anteriormente**, ocorre o seguinte fluxo:
 
- { "type": "movement", "name": "move_right", "repeat": 2, "speed": "fast"}
+- A música é gravada via **Stereo Mix** e salva como `.mp3`.
+- Utiliza-se a **local Whisper** para transcrever a música.
+- São obtidos os **timestamps** de cada trecho da letra.
+- Após a transcrição, é enviado um **prompt** para a IA (Gemini), contendo:
+  - Um modelo de **output JSON** com movimentos e gestos.
+  - A letra transcrita da música.
 
-   ]   },
+#### 🧠 Prompt enviado:
 
- {   
-
-"start_time": "00:05",  
-
- "end_time": "00:08",   
-
-"actions": [   
-
-  { "type": "movement", "name": "bounce", "speed": "slow" }   
-
+```json
+[
+  {
+    "start_time": "00:00",
+    "end_time": "00:05",
+    "actions": [
+      { "type": "gesture", "name": "hands_up" },
+      { "type": "movement", "name": "move_right", "repeat": 2, "speed": "fast" }
+    ]
+  },
+  {
+    "start_time": "00:05",
+    "end_time": "00:08",
+    "actions": [
+      { "type": "movement", "name": "bounce", "speed": "slow" }
+    ]
+  }
 ]
+#### 📝 Prompt em F-string:
 
-  } ]
-
-F-string prompt = Prompt Title:
+```python
+prompt = f'''
+Prompt Title:
 Generate Expressive Choreography for a Humanoid Robot Based on Timed Song Lyrics
 
 Prompt:
 
-You are choreographing a performance for a humanoid robot based on a song's lyrics and timestamps. The robot has articulated shoulders and arms and is capable of coordinated full-body movements across a horizontal scale ranging from 0 to 100, with its current position at {{current_position}}.
+You are choreographing a performance for a humanoid robot based on a song's lyrics and timestamps. The robot has articulated shoulders and arms and is capable of coordinated full-body movements across a horizontal scale ranging from 0 to 100, with its current position at {current_position}.
 
 Robot Capabilities
 1. Horizontal Body Movement (each moves the robot 10 units):
-move_left: Moves the robot 10 units to the left.
-
-move_right: Moves the robot 10 units to the right.
+- move_left: Moves the robot 10 units to the left.
+- move_right: Moves the robot 10 units to the right.
+- bounce: A predefined rhythmic sequence: left → right → left → right.
 
 These commands can be:
-
-Repeated to achieve larger displacements (e.g., two move_left = 20 units).
-
-Combined with arm gestures in the same timestamp window.
-
-bounce: A predefined rhythmic sequence: left → right → left → right.
+- Repeated to achieve larger displacements (e.g., two move_left = 20 units).
+- Combined with arm gestures in the same timestamp window.
 
 2. Pre-Programmed Arm Gestures:
-hands_in_heart
+- hands_in_heart
+- hands_in_head
+- hands_up
+- left_hand_up
+- left_hand_down
+- left_hand_front_to_left
+- right_hand_up
+- right_hand_down
+- right_hand_front_to_right
 
-hands_in_head
+These gestures can be used alone or combined with horizontal movements, and can include speed modifiers: slow, neutral (default), or fast.
 
-hands_up
-
-left_hand_up
-
-left_hand_down
-
-left_hand_front_to_left
-
-right_hand_up
-
-right_hand_down
-
-right_hand_front_to_right
-
-These gestures can be used alone or combined with horizontal movements in a single interval and can be Assigned a speed modifier: slow, neutral (default), or fast..
-
-Your Objective
+Your Objective:
 Given a list of lyrics with timestamps, assign meaningful and expressive robot commands that match the rhythm, mood, and energy of each lyrical segment. Ensure the choreography:
+- Enhances the performance visually and emotionally.
+- Reflects sentiment changes in the lyrics.
+- Uses smooth and logical transitions.
+- Respects the robot’s movement capabilities and boundaries (0–100 range).
 
-Enhances the performance visually and emotionally.
-
-Reflects sentiment changes in the lyrics.
-
-Uses smooth and logical transitions.
-
-Respects the robot’s movement capabilities and boundaries (0–100 range).
 IMPORTANT INSTRUCTIONS:
 1. Always use MM:SS format for timestamps (e.g. 00:00, 01:30)
 2. Only output the JSON array, without any additional text or explanations
 3. Follow exactly this example format:
 
 Letra:
-\n{musica}
+{letra_da_musica}
 
-Output Format
-Produce an array of commands in this structured format:
-\n{output_model}
-""" 
-Esse prompt é então enviado para o gemini que retorna o json estruturado e pronto para servir de estrutura de dados de envio para o arduino. 
-após o Json concluído caímos no outro caso onde agora temos uma música gravada sendo reproduzida, ao iniciar a reprodução de uma música com Json de mesmo nome, 
-será comparado os tempos dos movimentos no Json com o tempo atual da música, ao entrar dentro do intervalo será enviado um comando para o Arduino através de uma tread em separado
-para não travar a interface com o usuário. 
-Esse envio será formatado para enviar somente o gesto a ser reproduzido naquele instante. {Arduino}
+Output Format:
+{output_model}
+'''
+Esse prompt é enviado para o **Gemini**, que retorna um **JSON estruturado** contendo os movimentos do robô sincronizados com a música.
+
+---
+
+### 🎵 Caso 2: Música já gravada
+
+Se a música **já foi processada anteriormente**, e há um arquivo JSON com os movimentos gerado previamente, então:
+
+- Ao iniciar a reprodução da música:
+  - O tempo atual da música é comparado com os intervalos do JSON.
+  - Ao entrar em um intervalo programado, o comando correspondente é enviado ao Arduino.
+  - Esse envio ocorre em uma thread separada, garantindo que a interface com o usuário não trave.
+
+A mensagem enviada ao Arduino é formatada para conter apenas o gesto a ser executado naquele instante:
+
+```text
+➡️ Envio final ao Arduino: {Arduino}
 
 
 ## 🔋 Alimentação do Robô
