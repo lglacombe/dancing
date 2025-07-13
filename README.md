@@ -1,19 +1,27 @@
-Ideia do projeto
+🤖 Robô Humanoide Coreógrafo com Inteligência Artificial
+💡 Ideia do Projeto
+Robô humanoide da cintura para cima (braços e cabeça), com deslocamento horizontal por meio de uma esteira. O robô é capaz de realizar coreografias sincronizadas com qualquer música selecionada, utilizando inteligência artificial para gerar os movimentos de forma autônoma e criativa.
 
-Robô humanoide de tronco para cima (braços e cabeça) com deslocamento horizontal via esteira, capaz de fazer coreografias geradas por inteligência artificial para qualquer música selecionada.
+🔩 Hardware Utilizado
+9 Servo-motores para controle individual de articulações (braços, cabeça, etc.), garantindo movimentos precisos.
 
-Hardware
+Shield Servo de 16 canais, permitindo que o Arduino controle múltiplos servos simultaneamente.
 
-Foram utilizados 9 servo-motores no total para o controle individual de cada articulação de forma precisa, assim como um Shield-Servo de até 16 canais para o arduino ser capaz de comandar todos os servos 
-simultaneamente. Além disso, foi utilizando também um Motor DC associado com um Shield-Motor para controlar o direcionamento da esteira.
-<img width="1516" height="1600" alt="image" src="https://github.com/user-attachments/assets/cc69fa6f-24c2-43e7-8202-1652f50d13de" />
+Motor DC para locomoção por esteira.
 
+Shield Motor, responsável pelo controle do motor DC.
 
-Estrutura e montagem do robô
+<img width="600" alt="hardware" src="https://github.com/user-attachments/assets/cc69fa6f-24c2-43e7-8202-1652f50d13de" />
+🛠️ Estrutura e Montagem
+Toda a estrutura física do robô foi:
 
-Toda a estrutura foi modelada utilizando o software SolidWorks, exportada no formato de STL e então impressa com o material PLA. Para prender os servos na estrutura utilizamos de parafusos e cola quente.
-<img width="505" height="379" alt="image" src="https://github.com/user-attachments/assets/6be24647-575c-4353-ad9b-f4171cf2be1f" />
+Modelada no SolidWorks 💻
 
+Exportada no formato STL e impressa em PLA 🖨️
+
+Montada com o uso de parafusos e cola quente para fixação dos servos
+
+<img width="400" alt="estrutura" src="https://github.com/user-attachments/assets/6be24647-575c-4353-ad9b-f4171cf2be1f" />
 
 Interação com a IA
 
