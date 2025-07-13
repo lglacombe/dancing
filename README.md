@@ -6,6 +6,8 @@ Hardware
 
 Foram utilizados 9 servo-motores no total para o controle individual de cada articulação de forma precisa, assim como um Shield-Servo de até 16 canais para o arduino ser capaz de comandar todos os servos 
 simultaneamente. Além disso, foi utilizando também um Motor DC associado com um Shield-Motor para controlar o direcionamento da esteira.
+<img width="1516" height="1600" alt="image" src="https://github.com/user-attachments/assets/cc69fa6f-24c2-43e7-8202-1652f50d13de" />
+
 
 Estrutura e montagem do robô
 
