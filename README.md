@@ -24,6 +24,120 @@ Toda a estrutura física do robô foi:
 <img width="400" alt="estrutura" src="https://github.com/user-attachments/assets/6be24647-575c-4353-ad9b-f4171cf2be1f" />
 
 
+🤖 Robô Humanoide com Controle de Movimento por Comandos Seriais
+Este projeto implementa o controle de um robô humanoide da cintura para cima (braços e cabeça), utilizando 9 servo-motores comandados por um Arduino. O sistema executa movimentos coreografados de forma sequencial a partir de comandos recebidos via porta serial, permitindo que o robô simule diferentes expressões ou emoções (e.g., happy, sad, loving).
+
+🔩 Hardware Utilizado
+9 Servo-motores: Controlam individualmente as seguintes articulações:
+
+Mãos (direita e esquerda)
+
+Cotovelos (direito e esquerdo)
+
+Ombros (p e o: primário e oposto, direito e esquerdo)
+
+Cabeça
+
+Shield Servo (PCA9685): Permite controle de múltiplos servos com precisão via I2C.
+
+(Opcional) Motor DC com esteira e Shield Motor: Para locomoção horizontal (não incluído neste código, mas previsto no projeto geral).
+
+🧠 Lógica do Código
+📦 Estrutura do Movimento
+Os movimentos são armazenados na estrutura Move, que contém:
+
+size: número de poses no movimento
+
+speed: velocidade de transição entre poses
+
+poses: sequência de arrays com os ângulos desejados para os 9 servos
+
+🤖 Servos e Enum
+Cada servo é referenciado por um enum Servo de 0 a 8:
+
+Copiar
+Editar
+RIGHT_HAND, RIGHT_ELBOW, P_RIGHT_SHOULDER, O_RIGHT_SHOULDER,
+O_LEFT_SHOULDER, P_LEFT_SHOULDER, LEFT_ELBOW, LEFT_HAND, HEAD
+🕹️ Comandos Seriais
+O robô aguarda comandos via Serial.readStringUntil('\n'). Os comandos disponíveis são:
+
+"happy"
+
+"neutral"
+
+"euphoric"
+
+"sad"
+
+"loving"
+
+"parado"
+
+Cada comando executa um movimento coreografado específico, utilizando uma sequência de poses e velocidades predefinidas.
+
+🛠️ Estrutura e Montagem
+Toda a estrutura física do robô foi:
+
+Modelada no SolidWorks 💻
+
+Exportada como .STL e impressa em PLA 🖨️
+
+Montada com parafusos e cola quente para fixação dos servos 🔧
+
+⚙️ Setup do Código
+Dependências
+Wire.h: Comunicação I2C com o PCA9685
+
+Adafruit_PWMServoDriver.h: Controle do PWM para os servos
+
+Inicialização
+Na função setup():
+
+Inicializa os servos em posição neutra
+
+Define os movimentos disponíveis (happy, sad, etc.)
+
+Loop Principal
+Na função loop():
+
+Aguarda comandos da porta serial
+
+Executa a sequência de poses associada ao comando recebido
+
+📦 Expansão
+Você pode adicionar novos movimentos definindo arrays de poses (como loving1, loving2) e preenchendo uma nova instância de Move. Isso torna o robô extensível para novas emoções ou coreografias.
+
+🎯 Exemplo de Uso
+Conecte o Arduino via USB
+
+Abra o monitor serial (9600 baud)
+
+Envie um comando como happy
+
+O robô executará a sequência definida para esse movimento
+
+📁 Organização das Poses
+As poses são arrays de 9 elementos representando os ângulos de cada servo. Por exemplo:
+
+c
+Copiar
+Editar
+int sad1[9] = {
+  default_rh + 90,   // RIGHT_HAND
+  default_re,        // RIGHT_ELBOW
+  default_prs + 50,  // P_RIGHT_SHOULDER
+  ...
+};
+📌 Observações
+O mapeamento dos ângulos para pulsos PWM é feito usando map(angle, 0, 180, SERVO_MIN, SERVO_MAX)
+
+Os limites SERVO_MIN e SERVO_MAX devem ser ajustados conforme o servo utilizado
+
+O controle suave é feito por interpolação de ângulos com delay
+
+
+
 Interação com a IA
 
 """
