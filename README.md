@@ -1,27 +1,28 @@
-🤖 Robô Humanoide Coreógrafo com Inteligência Artificial
-💡 Ideia do Projeto
+# 🤖 Robô Humanoide Coreógrafo com Inteligência Artificial
+
+## 💡 Ideia do Projeto
+
 Robô humanoide da cintura para cima (braços e cabeça), com deslocamento horizontal por meio de uma esteira. O robô é capaz de realizar coreografias sincronizadas com qualquer música selecionada, utilizando inteligência artificial para gerar os movimentos de forma autônoma e criativa.
 
-🔩 Hardware Utilizado
-9 Servo-motores para controle individual de articulações (braços, cabeça, etc.), garantindo movimentos precisos.
+## 🔩 Hardware Utilizado
 
-Shield Servo de 16 canais, permitindo que o Arduino controle múltiplos servos simultaneamente.
-
-Motor DC para locomoção por esteira.
-
-Shield Motor, responsável pelo controle do motor DC.
+- **9 Servo-motores** para controle individual de articulações (braços, cabeça, etc.), garantindo movimentos precisos.
+- **Shield Servo de 16 canais**, permitindo que o Arduino controle múltiplos servos simultaneamente.
+- **Motor DC** para locomoção por esteira.
+- **Shield Motor**, responsável pelo controle do motor DC.
 
 <img width="600" alt="hardware" src="https://github.com/user-attachments/assets/cc69fa6f-24c2-43e7-8202-1652f50d13de" />
-🛠️ Estrutura e Montagem
+
+## 🛠️ Estrutura e Montagem
+
 Toda a estrutura física do robô foi:
 
-Modelada no SolidWorks 💻
-
-Exportada no formato STL e impressa em PLA 🖨️
-
-Montada com o uso de parafusos e cola quente para fixação dos servos
+- Modelada no **SolidWorks** 💻
+- Exportada no formato **STL** e impressa em **PLA** 🖨️
+- Montada com o uso de **parafusos** e **cola quente** para fixação dos servos
 
 <img width="400" alt="estrutura" src="https://github.com/user-attachments/assets/6be24647-575c-4353-ad9b-f4171cf2be1f" />
+
 
 Interação com a IA
 
