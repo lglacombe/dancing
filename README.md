@@ -170,3 +170,13 @@ após o Json concluído caímos no outro caso onde agora temos uma música grava
 será comparado os tempos dos movimentos no Json com o tempo atual da música, ao entrar dentro do intervalo será enviado um comando para o Arduino através de uma tread em separado
 para não travar a interface com o usuário. 
 Esse envio será formatado para enviar somente o gesto a ser reproduzido naquele instante. {Arduino}
+
+
+## 🔋 Alimentação do Robô
+
+Para que o robô execute os movimentos corretamente, é necessário fornecer alimentação de **5V** tanto para os **Arduinos (servos e esteira)** quanto para o **shield de servos**.
+
+- A alimentação deve ser feita com atenção à polaridade (positivo no pino V+ e negativo no GND do shield).
+- Para os arduinos, pode-se usar as portas USB de um computador, se for conveniente.
+
+⚠️ **Atenção:** Verifique sempre a tensão e corrente da fonte antes de ligar, para evitar danos aos componentes.
